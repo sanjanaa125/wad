@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include your custom theme CSS file -->
+  <link rel="stylesheet" href="your_custom_theme.css">
+  <!-- Include jQuery Mobile CSS file -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header" data-theme="b">
+    <h1>Welcome to My Mobile Website</h1>
+  </div>
+
+  <div data-role="navbar" data-theme="b">
+    <ul>
+      <li><a href="#home" class="ui-btn-active">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </div>
+
+  <div data-role="content">
+    <p>Hello!!!!
+              We welcome to our race with enthusiasm 
+    </p>
+    <a href="#gallery" data-role="button" data-theme="a">View Gallery</a>
+  </div>
+
+  <div data-role="footer" data-theme="a">
+    <h4>&copy; 2024 Mobile Website</h4>
+  </div>
+</div>
+
+<!-- Gallery Page -->
+<div data-role="page" id="gallery">
+  <div data-role="header" data-theme="b">
+    <h1>Gallery</h1>
+  </div>
+
+  <div data-role="navbar" data-theme="b">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery" class="ui-btn-active">Gallery</a></li>
+    </ul>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#image1"><img src="save.png" alt="runner-up"><h2>runner-up</h2><p>Runner-Up</p></a></li>
+      <li><a href="#image2"><img src="victory.jpg" alt="winner"><h2>Winner</h2><p>Winner</p></a></li>
+    </ul>
+  </div>
+
+  <div data-role="footer" data-theme="b">
+    <h4>&copy; 2024 Mobile Website</h4>
+  </div>
+</div>
+
+<!-- Image 1 Page -->
+<div data-role="page" id="image1">
+  <div data-role="header" data-theme="b">
+    <h1>runner-up</h1>
+    <a href="#gallery" data-icon="back" data-role="button" data-rel="back">Back</a>
+  </div>
+
+  <div data-role="content">
+    <img src="save.png" alt="runner-up">
+    <p>Ladies and Gentlemen,
+
+        I am deeply honored to stand before you as the runner-up of this prestigious competition. I want to extend my heartfelt gratitude to everyone who supported me along this journey.
+        
+        Competing in this event has been an incredible experience filled with growth and camaraderie. While I may not have clinched the top spot, this journey has taught me valuable lessons about resilience and perseverance.
+        
+        I want to thank my coaches, mentors, and supporters for believing in me and pushing me to be the best version of myself. Your encouragement has been the driving force behind my achievements.
+        
+        To my fellow competitors, congratulations on your success. Your talent and determination have inspired me greatly.
+        
+        As a runner-up, I am proud to represent the spirit of perseverance and sportsmanship. This achievement serves as a stepping stone for future endeavors, and I am excited for what lies ahead.
+        
+        Thank you to the organizers, judges, and sponsors for providing this platform. It has been an honor to participate in this competition.
+        
+        Thank you all. </p>
+  </div>
+
+  <div data-role="footer" data-theme="b">
+    <h4>&copy; 2024 Mobile Website</h4>
+  </div>
+</div>
+
+<!-- Image 2 Page -->
+<div data-role="page" id="image2">
+  <div data-role="header" data-theme="b">
+    <h1>Winner</h1>
+    <a href="#gallery" data-icon="back" data-role="button" data-rel="back">Back</a>
+  </div>
+
+  <div data-role="content">
+    <img src="victory.jpg" alt="Winner">
+    <p>Ladies and Gentlemen,
+
+        It is with immense pride and gratitude that I stand before you today as the winner of this prestigious competition. I am truly humbled by this honor and extend my heartfelt thanks to everyone who has supported me on this journey.
+        
+        Competing in this event has been an exhilarating experience filled with challenges and triumphs. I am deeply grateful for the opportunity to showcase my skills and passion on this esteemed stage.
+        
+        To my coaches, mentors, and supporters, thank you for your unwavering belief in me and for pushing me to reach new heights. Your guidance and encouragement have been invaluable throughout this journey.
+        
+        I would also like to congratulate my fellow competitors for their outstanding performances. Each of you has brought immense talent and determination to this competition, and I am honored to have shared the stage with you.
+        
+        As the winner, I am committed to upholding the values of hard work, perseverance, and sportsmanship. This victory is not just for me but for everyone who has believed in me and supported me along the way.
+        
+        To the organizers, judges, and sponsors, thank you for making this event possible. Your dedication to fostering talent and promoting excellence is truly commendable.
+        
+        In closing, I am filled with gratitude and excitement for the journey ahead. This win is a testament to the power of perseverance and the belief that anything is possible with dedication and determination.
+        
+        Thank you all once again for this incredible honor.
+        
+        </p>
+  </div>
+
+  <div data-role="footer" data-theme="b">
+    <h4>&copy; 2024 Mobile Website</h4>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <center><h1>STUDENT INFORMATION FORM</h1></center> <br/>
+    <form id="studentForm">
+        <center>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" size="25" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" size="25" id="address"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" size="25" id="phone"></td>
+                </tr>
+                <tr>
+                    <td>Class:</td>
+                    <td>
+                        <select id="class">
+                            <option value="FE">FE</option>
+                            <option value="SE">SE</option>
+                            <option value="TE">TE</option>
+                            <option value="BE">BE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" id="submitBtn" value="Submit"></td>
+                </tr>
+            </table>
+        </center>
+    </form>
+
+    <button id="displayBtn">Display</button>
+
+    <script>
+        $(document).ready(function () {
+            // Function to fill input fields with stored data
+            $("#displayBtn").click(function () {
+                const var1 = localStorage.getItem("storage");
+                if (var1) {
+                    const myobj = JSON.parse(var1);
+                    $("#name").val(myobj.name);
+                    $("#address").val(myobj.address);
+                    $("#phone").val(myobj.phone);
+                    $("#class").val(myobj.class);
+                } else {
+                    alert("No data stored.");
+                }
+            });
+
+            // Function to redirect to ajax2.html on form submission
+            $("#studentForm").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+                window.location.href = "ajax2.html"; // Redirect to ajax2.html
+            });
+        });
+    </script>
+</body>
+</html>

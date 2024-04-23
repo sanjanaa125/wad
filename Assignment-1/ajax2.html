@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Submitted Data</title>
+</head>
+<body>
+    <center><h1>Submitted Data</h1></center> <br/>
+    <div id="displayData">
+        <!-- Submitted data will be displayed here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to display submitted data
+            function displaySubmittedData() {
+                const var1 = localStorage.getItem("storage");
+                if (var1) {
+                    const myobj = JSON.parse(var1);
+                    $("#displayData").html(`
+                        <p><strong>Name:</strong> ${myobj.name}</p>
+                        <p><strong>Address:</strong> ${myobj.address}</p>
+                        <p><strong>Phone Number:</strong> ${myobj.phone}</p>
+                        <p><strong>Class:</strong> ${myobj.class}</p>
+                    `);
+                } else {
+                    $("#displayData").html("<p>No data submitted.</p>");
+                }
+            }
+
+            // Call the function to display submitted data
+            displaySubmittedData();
+        });
+    </script>
+</body>
+</html>
